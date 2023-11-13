@@ -51,7 +51,7 @@ def register_and_verify (request):
                  
             
 @api_view(['POST'])
-def activate (self, request):
+def activate (request):
         
     bus_user_manager = BusUserManager()
     serializer = BusUserSerializer(data=request.data)
