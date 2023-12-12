@@ -6,6 +6,7 @@ import 'post.dart';
 
 String _path = '/bus_user/';
 
+/// This function sends a POST request for registering a user.
 Future<Map<String, dynamic>> registerBusUser (
 
   String fname,
@@ -32,6 +33,7 @@ Future<Map<String, dynamic>> registerBusUser (
 }
 
 
+/// This function sends a POST request for logging a user in
 Future<Map<String, dynamic>> loginBusUser (
 
   String ashesiEmail,
