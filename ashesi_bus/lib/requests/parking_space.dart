@@ -6,6 +6,8 @@ import 'get.dart';
 
 String _path = '/parking_space/';
 
+
+/// This function sends a GET request to get a list of all parking spaces as maps.
 Future<List<Map<String,dynamic>>> getAllParkingSpaces () async {
   
     return fetchListWithoutQueryParams(
@@ -14,6 +16,7 @@ Future<List<Map<String,dynamic>>> getAllParkingSpaces () async {
 
 }
 
+/// This function sends a PATCH request to update the vehicle parked in the parking space with ID, parkingSpaceId.
 Future<Map<String,dynamic>> parkVehicle (int vehicleId, int parkingSpaceId) async {
 
   return update(
@@ -26,7 +29,7 @@ Future<Map<String,dynamic>> parkVehicle (int vehicleId, int parkingSpaceId) asyn
 
 }
 
-
+/// This function sends a PATCH request to set the vehicle field in the parking space entry with ID, parkingSpaceId to null.
 Future<Map<String,dynamic>> unparkVehicle (int parkingSpaceId) async {
 
   return update(
@@ -38,6 +41,8 @@ Future<Map<String,dynamic>> unparkVehicle (int parkingSpaceId) async {
 
 }
 
+
+/// This function sends a GET request to get a list of all vehicles parked.
 Future<List<Map<String,dynamic>>> getVehiclesParked () async {
   
     return fetchListWithoutQueryParams(
