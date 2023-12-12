@@ -19,4 +19,4 @@ Django Rest Framework (DRF) is a powerful framework that abstracts common tasks 
 
 ---
 
-*Feel free to adjust the formatting based on your preferences or additional content.*
+*This is a link to a [Google Document](https://docs.google.com/document/d/1D9xNJdMf5j3DboYF6D96KzdraKXdgwmT/edit?usp=sharing&ouid=104244419653743082763&rtpof=true&sd=true) containing information about this system.*
