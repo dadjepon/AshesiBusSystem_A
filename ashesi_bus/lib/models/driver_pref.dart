@@ -3,8 +3,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:async';
 
+
+/// This class is used to save and retrieve the driver's data from the device.
 class DriverPref {
   
+  /// This method is used to save the driver's data to the device.
   Future<void> saveDriver(Driver driver) async {
 
     final SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -16,6 +19,8 @@ class DriverPref {
     prefs.setString("phone_number", driver.phoneNumber);
   }
 
+
+  /// This method is used to retrieve the driver's data from the device.
   Future<Driver> getDriver() async {
 
     final SharedPreferences prefs = await SharedPreferences.getInstance();
