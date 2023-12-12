@@ -1,0 +1,7 @@
+Django==3.2.8
+djangorestframework==3.12.4
+pymysql==1.0.2
+paystack
+firebase-admin==5.0.3
+django-cors-headers
+gunicorn
