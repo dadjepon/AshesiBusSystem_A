@@ -110,7 +110,7 @@ Future<List<Map<String, dynamic>>> getOngoingTrips () async {
 
 
 /// Retrieves a list of ongoing trips that have been started by a driver.
-/// Ongoing trips are trips in the TripTaken table that have been started today but have not been ended.
+/// Ongoing trips are trips in the TripTaken table that have not been ended.
 /// Returns a Future that resolves to a List of Maps, where each Map represents a trip and contains
 /// trip information in key-value pairs
 Future<List<Map<String, dynamic>>> getOngoingTripsStartedByDriver (int driverId) async {
@@ -125,6 +125,10 @@ Future<List<Map<String, dynamic>>> getOngoingTripsStartedByDriver (int driverId)
 }
 
 
+/// Retrieves a list of ended trips that a bus user has joined.
+/// Ended trips are trips in the TripTaken table that have is_ended set to 1.
+/// Returns a Future that resolves to a List of Maps, where each Map represents a trip and contains
+/// trip information in key-value pairs
 Future<List<Map<String, dynamic>>> getBusUserEndedTrips (int busUserId) async {
 
   return fetchListWithQueryParams(
@@ -137,6 +141,10 @@ Future<List<Map<String, dynamic>>> getBusUserEndedTrips (int busUserId) async {
 }
 
 
+/// Retrieves a list of ongoing trips that the bus user is on. The bus user is allowed to be on one trip at a time.
+/// Ongoing trips are trips in the TripTaken table that have not been ended.
+/// Returns a Future that resolves to a List of Maps, where each Map represents a trip and contains
+/// trip information in key-value pairs
 Future<List<Map<String, dynamic>>> getBusUserOngoingTrips (int busUserId) async {
 
   return fetchListWithQueryParams(
@@ -148,7 +156,9 @@ Future<List<Map<String, dynamic>>> getBusUserOngoingTrips (int busUserId) async 
 
 }
 
-
+/// Retrieves a list of stops for a trip with ID, tripId.
+/// Returns a Future that resolves to a List of Maps, where each Map represents a stop and contains
+/// stop details in key-value pairs
 Future<List<Map<String, dynamic>>> getStopsForTrip (int tripId) async {
 
   return fetchListWithQueryParams(
@@ -160,6 +170,10 @@ Future<List<Map<String, dynamic>>> getStopsForTrip (int tripId) async {
 
 }
 
+/// Retrieves a list of all trips and their stops.
+/// Returns a Future that resolves to a List of Maps, where each Map represents a trip and contains
+/// trip details in key-value pairs, where one of the key-value pair's value is a list of maps, where 
+/// each map represents a stop along the trip.
 Future<List<Map<String, dynamic>>> getAllTripsAndStops () async {
 
   return fetchListWithoutQueryParams(
@@ -169,6 +183,9 @@ Future<List<Map<String, dynamic>>> getAllTripsAndStops () async {
 }
 
 
+/// Retrieves a list of all trips that have been started
+/// Returns a Future that resolves to a List of Maps, where each Map represents a trip and contains
+/// stop details in key-value pairs
 Future<List<Map<String, dynamic>>> getAllTripsTaken () async {
 
   return fetchListWithoutQueryParams(
@@ -177,6 +194,11 @@ Future<List<Map<String, dynamic>>> getAllTripsTaken () async {
 
 }
 
+
+/// Retrieves a list of all trips that have been completed by a driver with id, driverId.
+/// A completed trip has its is_ended field set to 1.
+/// Returns a Future that resolves to a List of Maps, where each Map represents a trip and contains
+/// stop details in key-value pairs
 Future<List<Map<String, dynamic>>> getTripsCompletedByDriver (int driverId) async {
 
   return fetchListWithQueryParams(
@@ -188,6 +210,10 @@ Future<List<Map<String, dynamic>>> getTripsCompletedByDriver (int driverId) asyn
 
 }
 
+
+/// Retrieves a list of all bus users who have paid for a trip.
+/// Returns a Future that resolves to a List of Maps, where each Map represents a bus user and contains
+/// user details in key-value pairs
 Future<List<Map<String, dynamic>>> getTripPassengers (int tripTakenId) async {
 
   return fetchListWithQueryParams(
@@ -200,6 +226,7 @@ Future<List<Map<String, dynamic>>> getTripPassengers (int tripTakenId) async {
 }
 
 
+/// Updates the is_ended field for an ongoing trip to 1.
 Future<Map<String, dynamic>> endTrip (int tripTakenId) async {
 
   return update(
