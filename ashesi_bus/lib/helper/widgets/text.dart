@@ -109,6 +109,7 @@ class LeftAlignedText extends StatelessWidget {
 }
 
 
+/// This class is used to create a text widget for right-aligned regular text.
 class RightAlignedText extends StatelessWidget {
   
   const RightAlignedText ({
@@ -156,6 +157,7 @@ class CenteredText extends StatelessWidget {
 }
 
 
+/// This class is used to create a text widget for a link to another page.
 class LinkText extends StatelessWidget {
   
   const LinkText ({
@@ -177,6 +179,9 @@ class LinkText extends StatelessWidget {
 
 }
 
+
+/// This class is used to create a text widget with a the user's name
+/// on top and the user's id below.
 class UsernameAndId extends StatelessWidget {
 
   const UsernameAndId({
