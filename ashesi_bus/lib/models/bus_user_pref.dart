@@ -3,8 +3,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:async';
 
+
+/// This class is used to save and retrieve the user's data from the device.
 class BusUserPref {
   
+
+  /// This method is used to save the user's data to the device.
   Future<void> saveBusUser(BusUser busUser) async {
 
     final SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -18,6 +22,8 @@ class BusUserPref {
 
   }
 
+
+  /// This method is used to retrieve the user's data from the device.
   Future<BusUser> getBusUser() async {
 
     final SharedPreferences prefs = await SharedPreferences.getInstance();
