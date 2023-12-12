@@ -2,6 +2,7 @@ import 'package:ashesi_bus/helper/widgets/text.dart';
 import 'package:flutter/material.dart';
 
 
+/// RegularAppBar is used for pages that have a back button
 class RegularAppBar extends StatelessWidget implements PreferredSizeWidget {
   
   @override
@@ -41,6 +42,8 @@ class RegularAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 }
 
+
+/// RegularAppBarNoBack is used for pages that do not have a back button
 class RegularAppBarNoBack extends StatelessWidget implements PreferredSizeWidget {
   
   @override
