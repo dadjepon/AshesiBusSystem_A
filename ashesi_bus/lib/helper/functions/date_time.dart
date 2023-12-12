@@ -51,7 +51,8 @@ String formatTime(String timeString) {
 }
 
 
-/// 
+/// This function takes a month string in the format "yyyy-mm" and returns the month in the format "MMMM y". For example, 
+/// if the month is "2023-12", the function returns "December 2023".
 String formatMonth(String month) {
   DateTime dateTime = DateTime.parse('$month-01');
   return DateFormat('MMMM y').format(dateTime);
