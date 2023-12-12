@@ -1,0 +1,8 @@
+Node.js
+bootstrap
+react-bootstrap
+cdbreact
+react-router
+react-router-dom
+axios
+react-icons
