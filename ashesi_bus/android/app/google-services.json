@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "104655464548",
+    "project_id": "ashesibus-6a47c",
+    "storage_bucket": "ashesibus-6a47c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104655464548:android:21701638cf41a70a9f5771",
+        "android_client_info": {
+          "package_name": "com.example.ashesi_bus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwtpF-kXpNdOtPplA5T0ddz-GvK8tTFTs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
