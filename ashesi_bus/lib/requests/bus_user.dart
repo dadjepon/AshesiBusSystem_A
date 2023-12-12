@@ -33,7 +33,7 @@ Future<Map<String, dynamic>> registerBusUser (
 }
 
 
-/// This function sends a POST request for logging a user in
+/// This function sends a POST request for logging a user in.
 Future<Map<String, dynamic>> loginBusUser (
 
   String ashesiEmail,
