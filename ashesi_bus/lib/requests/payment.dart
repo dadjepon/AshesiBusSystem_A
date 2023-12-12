@@ -5,6 +5,9 @@ import 'package:http/http.dart' as http;
 String _path = '/payment/';
 
 
+/// This function send a POST request for making payment.
+/// It allow a user with ID, busUserId to pay for an ongoing trip with ID, tripTakenId.
+/// The amount is determined by the stop selected. All stops cost 3 cedis except those along the road from Ashesi to Kwabenya.
 Future <Map<String, dynamic>> initiatePayment(int tripTakenId, double amount, int busUserId, int stopId) async {
 
 
