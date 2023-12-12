@@ -7,6 +7,7 @@ import 'package:http/http.dart' as http;
 import 'api_uri.dart';
 
 
+/// This class is contains a login function for sending a POST request for driver data. If there's a response with a status code of 200, the data is stored locally using Shared Preferences.
 class DriverAuthProvider with ChangeNotifier {
 
 
