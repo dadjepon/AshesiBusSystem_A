@@ -17,6 +17,11 @@ Django Rest Framework (DRF) is a powerful framework that abstracts common tasks 
 
 - **Paystack:** Paystack is a payment gateway that supports mobile money transactions. Its API has an easy integration process, making it suitable.
 
+### The React Framework
+Choosing React for our web application was a strategic decision driven by its component-based architecture, efficient virtual DOM implementation, and declarative syntax that enhances code readability. The vast ecosystem and active community around React provided us with many resources, from documentation to third-party libraries, accelerating our development process. React's seamless integration with the backend was facilitated by using Axios, a widely adopted HTTP client. Leveraging Axios, we established smooth communication between the front and backend, ensuring efficient data retrieval and updates. This streamlined our application's performance and allowed us to implement responsive and dynamic user interfaces. React's robust features and compatibility with tools like Axios have empowered us to build a scalable, maintainable, and performant web application.
+
+*This is a link to [admin console](https://ashesibus-304d2.web.app/).*
+
 ---
 
 *This is a link to a [Google Document](https://docs.google.com/document/d/1D9xNJdMf5j3DboYF6D96KzdraKXdgwmT/edit?usp=sharing&ouid=104244419653743082763&rtpof=true&sd=true) containing information about this system.*
